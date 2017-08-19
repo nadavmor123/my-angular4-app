@@ -1,0 +1,12 @@
+<div class="row">
+    <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12" id="top-deal">
+        <div>
+            <h2>Top Deal</h2>
+            <div>{{topDeal.name}}</div>
+        </div>
+    </div>
+    <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12" *ngFor="let item of arr | slice:1:itemMaxNum; let i=index">
+        <h2>Deal</h2>
+        <div>{{item.name}}</div>
+    </div>
+</div>

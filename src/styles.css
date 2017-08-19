@@ -1,1 +1,7 @@
-/* You can add global styles to this file, and also import other style files */
+div#top-deal {
+    min-height: 180px;
+}
+
+div#top-deal-sm {
+    min-height: 280px;
+}
