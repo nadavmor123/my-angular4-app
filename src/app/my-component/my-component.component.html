@@ -1,12 +1,81 @@
 <div class="row">
-    <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12" id="top-deal">
-        <div>
-            <h2>Top Deal</h2>
-            <div>{{topDeal.name}}</div>
+    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+        <div id="top-deal">
+            <div class="row">
+                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                    <div class="row">
+                        <div id="top-icon" [ngStyle]="{'background': getColorTheme('background', topDeal.discount)}">
+                            {{topDeal.discount}} off
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                    <img [src]="topDeal.img" id="top-deal-img" />
+                </div>
+            </div>
+
+
+            <div class="row no-margin">
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6" id="top-deal-price">
+                    <div class="price" [ngStyle]="{'color': getColorTheme('color', topDeal.discount)}">
+                        ${{topDeal.price}}
+                    </div>
+                </div>
+                <div class="col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-6 col-xs-6" id="top-deal-provider">
+                    <div class="text">
+                        {{topDeal.provider}}
+                    </div>
+                </div>
+            </div>
+            <div class="row no-margin">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text" id="mid-text">
+                    {{topDeal.text}}
+                </div>
+            </div>
+            <div class="bottom-row">
+                <div *ngFor="let d of topDeal.data" class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <div class="text" id="bottom-text">{{d}}</div>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12" *ngFor="let item of arr | slice:1:itemMaxNum; let i=index">
-        <h2>Deal</h2>
-        <div>{{item.name}}</div>
+    <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12" *ngFor="let deal of deals | slice:1:itemMaxNum; let i=index">
+        <div class="side-deal" [ngStyle]="{'border': getColorTheme('border', deal.discount)}">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <div class="row">
+                        <div id="top-icon" [ngStyle]="{'background': getColorTheme('background', deal.discount)}">
+                            {{topDeal.discount}} off
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text" id="bottom-mid-text">
+                            {{topDeal.text}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <div id="side-deal-img">
+                        <img [src]="deal.img" />
+                    </div>
+                </div>
+            </div>
+            <div class="row no-margin">
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6" id="top-deal-price">
+                    <div class="price" [ngStyle]="{'color': getColorTheme('color', deal.discount)}">
+                        ${{deal.price}}
+                    </div>
+                </div>
+                <div class="col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-6 col-xs-6" id="top-deal-provider">
+                    <div class="text">
+                        {{deal.provider}}
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-row">
+                <div *ngFor="let d of deal.data" class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <div class="text" id="bottom-text">{{d}}</div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>

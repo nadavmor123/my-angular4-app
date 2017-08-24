@@ -1,7 +1,103 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
 div#top-deal {
-    min-height: 180px;
+    min-height: 300px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 div#top-deal-sm {
     min-height: 280px;
+}
+
+div#top-deal {
+    width: 90%;
+    margin: 10px auto;
+    border: 2px solid lightcoral;
+    box-shadow: 2px 0px 5px;
+    display: table;
+    padding-bottom: 5px;
+}
+
+div#top-deal-provider {
+    padding-right: 0px;
+    text-align: right;
+    padding-top: 15px;
+    font-size: 12px;
+}
+
+div#top-deal-price {
+    padding-left: 0px;
+    font-size: 25px;
+    color: lightcoral;
+}
+
+img#top-deal-img {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.row {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.no-margin {
+    border-bottom: 2px solid #e6e6e6;
+    margin: 0px;
+}
+
+.text {
+    color: darkgray;
+}
+
+div#mid-text {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 0px;
+    text-align: left;
+    height: 90px;
+}
+
+div#bottom-text {
+    text-align: center;
+    padding-top: 5px;
+}
+
+div#bottom-mid-text {
+    padding-top: 20px;
+    font-size: 12px;
+    padding-left: 0px;
+}
+
+div#top-icon {
+    width: 40px;
+    font-weight: bold;
+    color: white;
+    height: 40px;
+    font-size: 12px;
+    border-radius: 30px;
+    text-align: center;
+    padding: 5px;
+    position: relative;
+    left: -5px;
+    top: 5px;
+}
+
+div#side-deal-img>img {
+    width: 100%;
+    padding: 15px;
+}
+
+.side-deal {
+    display: table;
+    width: 90%;
+    margin: 10px auto;
+    box-shadow: 1px 0px 10px 0px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
